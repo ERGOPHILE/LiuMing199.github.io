@@ -1,6 +1,6 @@
 (function(){
-       //使用表单校验插件
-       $("#form").bootstrapValidator({
+   //使用表单校验插件
+  $("#form").bootstrapValidator({
 
         // 配置图标
         feedbackIcons: {
@@ -48,5 +48,41 @@
             }
           }
         }
-      });
-})();
+  });
+  
+  
+   
+
+    //单击登录按钮验证发送ajax请求
+        $("#form").on("success.form.bv",function(e){
+          //取消默认提交事件
+          e.preventDefault();
+          var form = $(this);
+          //拦截后发送ajax请求验证用户名和密码是否合法
+          $.ajax({
+            type:"post",
+            url:"/employee/employeeLogin",
+            //  serialize()
+            data:form.serialize(),
+            success:function(info){
+                  if(info.success){
+                      location.href = "index.html"
+                  } 
+              if(info.error == 1000){          
+                    $("#form").data("bootstrapValidator").updateStatus("username", "INVALID", "callback");
+              }
+              if(info.error == 1001){          
+                $("#form").data("bootstrapValidator").updateStatus("password", "INVALID", "callback");
+          }           
+            }
+          });
+       
+     });
+
+    //点击重置按钮所有样式消失
+    $("[type='reset']").click(function(){
+      console.log(11);
+      
+       $("#form").data("bootstrapValidator").resetForm();
+    });
+  })();
