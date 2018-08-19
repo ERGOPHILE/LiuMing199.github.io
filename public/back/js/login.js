@@ -50,9 +50,6 @@
         }
   });
   
-  
-   
-
     //单击登录按钮验证发送ajax请求
         $("#form").on("success.form.bv",function(e){
           //取消默认提交事件
@@ -80,9 +77,7 @@
      });
 
     //点击重置按钮所有样式消失
-    $("[type='reset']").click(function(){
-      console.log(11);
-      
+    $("[type='reset']").click(function(){   
        $("#form").data("bootstrapValidator").resetForm();
     });
   })();

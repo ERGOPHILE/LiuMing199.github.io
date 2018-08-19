@@ -1,5 +1,26 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
 body {
   background-color: #222D32;
+}
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: white;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a.count {
+  background-color: #1D1F21;
 }
 .login {
   margin-top: 150px;
@@ -8,4 +29,121 @@ body {
   height: 40px;
   text-align: center;
   line-height: 40px;
+}
+.left_aslide {
+  z-index: 999;
+  height: 100%;
+  width: 180px;
+  color: white;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: #222D32;
+  transition: all 2s;
+}
+.left_aslide.count {
+  left: -180px;
+}
+.left_aslide .top_bar a {
+  width: 100%;
+  height: 50px;
+  display: block;
+  line-height: 50px;
+  text-align: center;
+  font-size: 24px;
+  color: white;
+  background-color: #367FA9;
+}
+.left_aslide .img {
+  text-align: center;
+  padding-top: 30px;
+  width: 100%;
+  height: 180px;
+}
+.left_aslide .img img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+}
+.left_aslide .img p {
+  padding-top: 10px;
+  height: 40px;
+  font-size: 18px;
+}
+.left_aslide .nav a {
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  padding-left: 40px;
+  display: block;
+  border: 3px solid transparent;
+}
+.left_aslide .nav li div a {
+  padding-left: 60px;
+}
+.right {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  padding-top: 50px;
+}
+.right .header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #5D9ED1;
+  position: fixed;
+  padding-left: 180px;
+  transition: all 2s;
+}
+.right .header a {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-size: 20px;
+}
+.right .header.count {
+  padding-left: 0;
+}
+.right .container-fluid {
+  padding-left: 180px;
+  transition: all 2s;
+}
+.right .container-fluid.count {
+  padding-left: 0px;
+}
+.right .container-fluid .breadcrumb {
+  width: 100%;
+  height: 36px;
+  margin: 20px 0;
+  padding: 10;
+}
+.right .container-fluid .breadcrumb a {
+  color: #338DCC;
+}
+.right .container-fluid .breadcrumb a:hover {
+  color: #7E52A1;
+}
+.right .container-fluid .can_left {
+  height: 400px;
+}
+.right .container-fluid .can_right {
+  height: 400px;
+}
+.modal-body p {
+  color: #A94442;
+}
+.header {
+  z-index: 888;
+}
+#user_tab {
+  height: 469px;
+}
+#pagintor {
+  position: absolute;
+  bottom: 100px;
+  right: 20%;
+  cursor: pointer;
 }

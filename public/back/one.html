@@ -7,8 +7,9 @@
     <title>乐淘淘</title>
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.min.css">
-    <link rel="stylesheet" href="lib/nprogress/nprogress.css">
     <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="lib/nprogress/nprogress.css">
+
 </head>
 <body>
      <!-- 左侧栏 -->
@@ -28,7 +29,7 @@
             <div class="nav">
                  <ul>
                      <li>
-                         <a href="user.html" class="user ">
+                         <a href="user.html" class="user">
                              <i class="glyphicon glyphicon-user"></i>
                             <span>用户管理</span>
                          </a>                          
@@ -38,8 +39,8 @@
                              <i class="glyphicon glyphicon-list"></i>
                             <span>分类管理</span>
                         </a>
-                        <div class="child" style="display: none;">
-                            <a href="one.html" class="child_a">一级分类</a>
+                        <div class="child" >
+                            <a href="one.html" class="child_a count">一级分类</a>
                             <a href="two.html" class="child_b" >二级分类</a>                        
                         </div>
                      </li>
@@ -65,13 +66,14 @@
            <div class="container-fluid">
                 <ol class="breadcrumb">
                         <li><a href="index.html">管理系统</a></li>
-                        <li class="active">首页</li>
+                        <li class="active">分类一</li>
                </ol>
-               <!-- 绘制图 -->
-               <div class="can_left  col-lg-7 col-md-7" id="can_left"></div>
-               <div class="can_right col-lg-5 col-md-5 " id="can_right"></div>
+              
            </div>
      </div>
+
+
+
     <!-- 模态框 -->
     <div class="modal fade" id="modal">
             <div class="modal-dialog modal-sm"  >
@@ -93,10 +95,8 @@
      <script src="lib/jquery/jquery.min.js"></script>   
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
-    <script src="lib/echarts/echarts.min.js"> </script>
-    <script src="lib/nprogress/nprogress.js"></script>
-    <script src="js/common.js"></script>  
-    <script src="js/index.js"></script>
+    <script src="lib/nprogress/nprogress.js"></script>   
+    <script src="js/common.js"></script>
 
 </body>
 </html>
