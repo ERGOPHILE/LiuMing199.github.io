@@ -14,8 +14,7 @@
                 pageSize:user_pagesize
             },
             dataType:"json",
-            success:function(info){
-                  console.log(info);                    
+            success:function(info){;                    
                   var str =  template("user_tpl",info);                    
                   $(".user_tab tbody").html(str);
            
@@ -41,9 +40,31 @@
     //点击按钮切换禁用启用
     //注册事件委托
     var id ;//获取用户选择修改的id
+    var isDelete ;
     $("#user_tab tbody").on("click",".btn",function(){
         $("#user_modal").modal("show");   
-         id = $(this).parent().data("id");       
+         id = $(this).parent().data("id");  
+         isDelete =  $(this).hasClass("btn-danger") ? 0 : 1; 
+         console.log(isDelete);
+                
     });
    //当点击确认的时候修改数据库中对应id的状态
+    $("#user_y").click(function(){
+        //发送ajax请求调用接口修改用户状态
+         $.ajax({
+              type:"post",
+              url:"/user/updateUser",
+              data:{
+                  id:id,
+                  isDelete: isDelete  
+              },
+              dataType:"json",
+              success:function(info){
+                   if(info.success){
+                       $("#user_modal").modal("hide");  
+                        pange();                                           
+                   }
+              }
+         });
+    });
 })();
