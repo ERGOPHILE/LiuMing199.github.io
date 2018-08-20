@@ -4,6 +4,20 @@
     //点击添加商品按钮显示模态框
       $("#add_pr").click(function(){
           $("#product_modal").modal("show");
+          //渲染二级分类
+          $.ajax({
+               type:"get",
+               url:"/category/querySecondCategoryPaging",
+               data:{
+                   page:1,
+                   pageSize:1000
+               },
+               dataType:"json",
+               success:function(info){
+                 var str = template("er_tpl",info);
+                   $("#er_ul").html(str);
+               }
+          });
       });
     //   //下架上架
     //   var id ;//获取用户需要修改的id

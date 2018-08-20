@@ -145,7 +145,7 @@
                                     <span class="caret"></span>
                              
                                 </button>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu" id="er_ul">
                                     <!-- <li><a href="#">Action</a></li>
                                             <li><a href="#">Another action</a></li>
                                             <li><a href="#">Something else here</a></li>
@@ -236,7 +236,12 @@
             </tr>
         {{/each}}
     </script>
-    
+    <!-- 二级分类渲染 -->
+    <script type="text/html" id="er_tpl">
+    {{each rows v i}}
+    <li><a href="#">{{v.brandName}}</a></li>
+     {{/each}}
+    </script>
     <script src="lib/jquery/jquery.min.js"></script>   
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>

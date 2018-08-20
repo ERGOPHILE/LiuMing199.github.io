@@ -144,8 +144,7 @@
                             <div class="dropdown">
                                 <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
                                     <span class="text" > 一级分类</span>
-                                    <span class="caret"></span>
-                             
+                                    <span class="caret"></span>                          
                                 </button>
                                 <ul class="dropdown-menu">
                                     <!-- <li><a href="#">Action</a></li>
@@ -168,13 +167,12 @@
                             <!-- 上传文件要指定name  还上传图片地址 -->
                             <input id="fileupload" type="file" name="pic1" data-url="/category/addSecondCategoryPic" multiple style="display: none">
                         </div>
-                        <div class="form-group" class="file_img">
-                            <img src="images/none.png" alt="" width="100">
+                        <div class="form-group" >
+                            <img src="images/none.png" alt="" height="100" class="file_img" >
                             <!-- 用以存入上传成功图片地址 -->
-                            <input type="hidden" id="file_url" name="fileurl">
+                            <input type="hidden" id="file_url" name="brandLogo" >
                         </div>
                     </form>
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>

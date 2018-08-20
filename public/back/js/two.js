@@ -58,10 +58,11 @@
         //获取上传成功图片的地址
         var picurl = data.result.picAddr;
          //设置图地址
-        $(".file_img img ").attr("src",picurl);
+        $(".file_img").attr("src",picurl);
         //把图片地址存入域中
+        
         $("#file_url").val(picurl);
-    $('#form').data("bootstrapValidator").updateStatus("fileurl", "VALID");        
+      $('#form').data("bootstrapValidator").updateStatus("brandLogo", "VALID");        
         }
     });
     
@@ -92,7 +93,7 @@
                   }
               }
           },
-          fileurl:{
+          brandLogo:{
             validators:{
                 notEmpty:{
                  message:"二级分类不能为空"                      
