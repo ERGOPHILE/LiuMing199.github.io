@@ -16,7 +16,7 @@
             dataType:"json",
             success:function(info){;                    
                   var str =  template("user_tpl",info);                    
-                  $(".user_tab tbody").html(str);
+                  $("#user_tab tbody").html(str);
            
            //分页
            $("#pagintor").bootstrapPaginator({
