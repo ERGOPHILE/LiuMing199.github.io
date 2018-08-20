@@ -52,7 +52,7 @@
     $(".menu").click(function(){
       $(".header").toggleClass("count"); 
       $(".left_aslide").toggleClass("count");  
-      $(".container-fluid").toggleClass("count");         
+      $(".right").toggleClass("count");         
     });
     //点击显示模态框
     $(".icon_lout").click(function(){

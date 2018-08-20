@@ -18,9 +18,8 @@ ul{
     margin: 0;
     padding: 0;
 }
-//单击高亮
-a.count{
-    background-color: #1D1F21;
+.t_b{
+   margin-bottom: 20px;
 }
 //登录页面
 .login {
@@ -76,14 +75,22 @@ a.count{
         }
     }
     .nav{
+       
         a{
         height: 40px;
         width: 100%;
         line-height: 40px;
         padding-left:40px;
         display: block;
-        border: 3px solid transparent; 
+        border-left: 3px solid transparent;
+        &.count{
+            background-color: #1D1F21;
+            border-left:3px solid #006699 ;
+           
+         }
         }
+        // /单击高亮
+       
         li div a{
            padding-left:60px;      
         }
@@ -97,6 +104,11 @@ a.count{
      height: 100%;
      background-color: #fff;
      padding-top:50px;
+     padding-left: 180px;
+     transition: all 2s;
+     &.count{
+        padding-left: 0;
+    }
      .header{
          top: 0;
          left:0;
@@ -105,7 +117,10 @@ a.count{
          background-color: #5D9ED1;
          position: fixed;
          padding-left: 180px;   
-         transition: all 2s;    
+         transition: all 2s; 
+         &.count{
+             padding-left: 0px;                
+            }   
         a{
             width: 50px;
             height: 50px;
@@ -113,14 +128,12 @@ a.count{
             text-align: center;
             font-size: 20px;
         }
-        &.count{
-            padding-left: 0;
-        }
+       
        }
 
     // 中间
         .container-fluid{
-            padding-left: 180px;
+            widows: 100%;
             transition: all 2s;
             &.count{
             padding-left: 0px;                
@@ -170,4 +183,18 @@ a.count{
     bottom: 100px;
     right: 20%;
     cursor: pointer;
+}
+//一级分类
+.one_form{
+    height: 79px;
+
+}
+//二级分类
+#two_mbody{
+    height: 290px;
+}
+#two_tb{
+    td{
+        line-height: 57px;
+    }
 }
