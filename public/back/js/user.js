@@ -45,7 +45,6 @@
         $("#user_modal").modal("show");   
          id = $(this).parent().data("id");  
          isDelete =  $(this).hasClass("btn-danger") ? 0 : 1; 
-         console.log(isDelete);
                 
     });
    //当点击确认的时候修改数据库中对应id的状态

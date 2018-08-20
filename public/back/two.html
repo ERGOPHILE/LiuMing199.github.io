@@ -81,7 +81,6 @@
                         <th class="text-center" width="30%">一级分类名称</th>
                         <th class="text-center" width="30%">二级分类名称</th>
                         <th class="text-center" width="30%">二级分类LOGO</th>
-
                     </tr>
                 </thead>
                 <tbody>
@@ -103,10 +102,6 @@
             </div>
         </div>
     </div>
-
-<div>
-    777
-</div>
     <!-- 退出 模态框 -->
     <div class="modal fade" id="modal">
         <div class="modal-dialog modal-sm">
@@ -126,11 +121,11 @@
                     <button type="button" class="btn btn-primary" id="loginOut">退出</button>
                 </div>
             </div>
-<<<<<<< HEAD
-     </div>
-     <script src="lib/jquery/jquery.min.js"></script>   
-=======
+
         </div>
+        <script src="lib/jquery/jquery.min.js"></script>
+
+    </div>
     </div>
     <!-- 添加分类二模态框 -->
     <div class="modal fade" id="two_modal">
@@ -144,32 +139,46 @@
                     <h4 class="modal-title">添加分类</h4>
                 </div>
                 <div class="modal-body" id="two_mbody">
-                 <div class="container">
-                    <form class="form-horizontal">
+                    <form class="bv-form" id="form" novalidate="novalidate">
                         <div class="form-group has-feedback">
-                                <div class="dropdown">
-                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" >
-                                             一级分类
-                                          <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" >
-                                            <!-- <li><a href="#">Action</a></li>
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                    <span class="text" > 一级分类</span>
+                                    <span class="caret"></span>
+                             
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <!-- <li><a href="#">Action</a></li>
                                             <li><a href="#">Another action</a></li>
                                             <li><a href="#">Something else here</a></li>
                                             <li role="separator" class="divider"></li>
                                             <li><a href="#">Separated link</a></li> -->
-                                        </ul>
-                                      </div>
+                                </ul>
+                            </div>
+                                     <!-- 存入选中的一级分类 -->                            
+                            <input type="hidden" name="addtext" id="one_fl" >
+                            <!-- 火热的品牌 -->
+                            <input type="hidden" name="hot" value="1">
                         </div>
-                       <div class="form-group">
-                          
-                       </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="请输入二级分类" name="brandName">
+                        </div>
+                        <div class="form-group">
+                            <label for="fileupload" class="btn btn-default">上传图片</label>
+                            <!-- 上传文件要指定name  还上传图片地址 -->
+                            <input id="fileupload" type="file" name="pic1" data-url="/category/addSecondCategoryPic" multiple style="display: none">
+                        </div>
+                        <div class="form-group" class="file_img">
+                            <img src="images/none.png" alt="" width="100">
+                            <!-- 用以存入上传成功图片地址 -->
+                            <input type="hidden" id="file_url" name="fileurl">
+                        </div>
                     </form>
-                </div>
+
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary" id="two_add">添加</button>
+                    <button type="submit" class="btn btn-primary" id="two_add" form="form">添加</button>
                 </div>
             </div>
         </div>
@@ -191,15 +200,17 @@
     <!-- 添加一级分类渲染 -->
     <script type="text/html" id="two_tbladd">
         {{each rows v i}}
-                <li><a href="#">{{v.categoryName}}</a></li>
+                <li categoryId = {{v.id}}><a href="#">{{v.categoryName}}</a></li>
         {{/each}}
     </script>
     <script src="lib/jquery/jquery.min.js"></script>
->>>>>>> frist
     <script src="lib/bootstrap/js/bootstrap.min.js"></script>
     <script src="lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
     <script src="lib/nprogress/nprogress.js"></script>
     <script src="lib/artTemplate/template-web.js"></script>
+    <!-- 文件上传 -->
+    <script src="lib/jquery-fileupload/jquery.ui.widget.js"></script>
+    <script src="lib/jquery-fileupload/jquery.fileupload.js"></script>
     <script src="js/common.js"></script>
     <script src="js/two.js"></script>
 </body>

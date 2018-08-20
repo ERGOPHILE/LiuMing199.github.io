@@ -98,7 +98,7 @@ $(function() {
       // 将图片地址存在隐藏域中
       $('[name="brandLogo"]').val( picAddr );
 
-      // 重置校验状态
+      // 重置校验状态图片时使用
       $('#form').data("bootstrapValidator").updateStatus("brandLogo", "VALID")
     }
   });
