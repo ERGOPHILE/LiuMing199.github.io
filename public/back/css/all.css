@@ -150,18 +150,9 @@ ul {
 #user_tab {
   height: 469px;
 }
-#pagintor {
-  position: absolute;
-  bottom: 100px;
-  right: 20%;
-  cursor: pointer;
-}
 .one_form {
   height: 79px;
 }
-#two_mbody {
-  height: 300px;
-}
 #two_tb td {
-  line-height: 57px;
+  line-height: 45px;
 }

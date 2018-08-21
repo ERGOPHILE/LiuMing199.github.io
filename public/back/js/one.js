@@ -69,6 +69,8 @@
 
   //添加分类
      $("#form").on("success.form.bv",function(e){  
+       //阻止表单 默认提交    e.preventDefault();
+       e.preventDefault();
     //发送ajax请求添加分类
     $.ajax({
         type:"post",
